@@ -1,1 +1,1 @@
-# diagnosticAnalysisAndStepwiseRegression
+# Diagnostic Analysis and Stepwise Regression
