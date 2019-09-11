@@ -131,3 +131,10 @@ n <- length(residuals(model2))
 
 plot(tail(residuals(model2), n - 1) ~ head(residuals(model2), n - 1),
      xlab = expression(hat(epsilon)[i]), ylab = expression(hat(epsilon)[i + 1]))
+
+# Plot to test independent errors again
+abline(h = 0, v = 0, col = grey(0.75))
+
+observation2 <- row.names(swissRemoveBoth)
+
+cook2 <- cooks.distance(model2)
