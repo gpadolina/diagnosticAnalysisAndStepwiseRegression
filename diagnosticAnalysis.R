@@ -57,3 +57,8 @@ abline(h = 0, v = 0, col = grey(0.75))
 observation <- row.names(swiss)
 
 hatV <- hatvalues(model)
+
+# Plot to identify leverage points
+halfnorm(hatV, labs = observation, ylab = "Leverages")
+
+cook <- cooks.distance(model)
