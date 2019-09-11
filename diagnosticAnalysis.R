@@ -148,3 +148,7 @@ model2RemoveR <- lm(Fertility ~ Agriculture + Education + Catholic +
 
 # Testing another model with new outlier removed
 summary(model2RemoveR)
+
+# Final data set with all 3 outliers removed
+swissFinal <- swissRemoveBoth[-c(45), ]
+View(swissFinal)
