@@ -152,3 +152,6 @@ summary(model2RemoveR)
 # Final data set with all 3 outliers removed
 swissFinal <- swissRemoveBoth[-c(45), ]
 View(swissFinal)
+
+# Model with only intercept (using final dataset)
+null2 <- lm(Fertility ~ 1, data = swissFinal)
