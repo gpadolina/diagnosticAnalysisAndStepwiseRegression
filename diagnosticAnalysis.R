@@ -62,3 +62,6 @@ hatV <- hatvalues(model)
 halfnorm(hatV, labs = observation, ylab = "Leverages")
 
 cook <- cooks.distance(model)
+
+# Plot to identify influential points
+halfnorm(cook, 3, labs = observation, ylab = "Cook's Distance")
