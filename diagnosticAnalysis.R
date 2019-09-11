@@ -145,3 +145,6 @@ halfnorm(cook2, 3, labs = observation2, ylab = "Cook's Distance")
 model2RemoveR <- lm(Fertility ~ Agriculture + Education + Catholic +
                     Infant.Mortality, data = swissRemoveBoth,
                     subset = (observation2 != "Rive Gauche"))
+
+# Testing another model with new outlier removed
+summary(model2RemoveR)
