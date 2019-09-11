@@ -106,3 +106,6 @@ model2 <- lm(Fertility ~ Agriculture + Education + Catholic +
              Infant.Mortality, data = swissRemoveBoth)
 
 summary(model2)
+
+# Testing multicollinearity of data with outliers removed
+vif(swissRemoveBoth)
