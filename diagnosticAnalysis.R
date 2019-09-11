@@ -65,3 +65,12 @@ cook <- cooks.distance(model)
 
 # Plot to identify influential points
 halfnorm(cook, 3, labs = observation, ylab = "Cook's Distance")
+
+# Provides several plots to identify potential outliers
+plot(model)
+
+summary(model)
+
+modelRemoveS <- lm(Fertility ~ Agriculture + Examination + Education +
+                   Catholic + Infant.Mortality, data = swiss,
+                   subset = (observation != "sierre"))
