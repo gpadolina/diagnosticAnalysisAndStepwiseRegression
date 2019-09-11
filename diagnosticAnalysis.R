@@ -100,3 +100,9 @@ null <- lm(Fertility ~ 1, data = swissRemoveBoth)
 # Performs stepwise regression on the null model with dataset excluding the two outliers
 step(null, scope = list(upper = modelRemoveBoth), data = swissRemoveBoth,
      direction = "both")
+
+# New model from stepwise regression
+model2 <- lm(Fertility ~ Agriculture + Education + Catholic +
+             Infant.Mortality, data = swissRemoveBoth)
+
+summary(model2)
