@@ -52,3 +52,8 @@ plot(tail(residuals(model), n-1) ~ head(residuals(model), n-1),
      xlab = expression(hat(epsilon)[i]), ylab = expression(hat(epsilon)[i + 1]))
 
 # Plot to test independent errors
+abline(h = 0, v = 0, col = grey(0.75))
+
+observation <- row.names(swiss)
+
+hatV <- hatvalues(model)
