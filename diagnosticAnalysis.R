@@ -87,3 +87,9 @@ summary(modelRemoveP)
 
 swissRemoveBoth <-[-c(6, 37), ]
 View(swissRemoveBoth)
+
+# Model with new dataset which removes both of the previous outliers
+modelRemoveBoth <- lm(Fertility ~ Agriculture + Examination + Catholic +
+                      Infant.Mortality, data = swissRemoveBoth)
+
+summary(modelRemoveBoth)
