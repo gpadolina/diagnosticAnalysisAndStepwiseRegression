@@ -159,3 +159,9 @@ null2 <- lm(Fertility ~ 1, data = swissFinal)
 # Stepwise regression on null model with final dataset to confirm the final model
 step(null, scope = list(upper = model2RemoveR), data = swissFinal,
      direction = "both")
+
+# Final check of multicollinearity with all outliers removed
+vif(swissFinal)
+
+plot(fitted(model2RemoveR), residuals(model2RemoveR),
+     xlab = "Fitted", ylab = "Residuals")
