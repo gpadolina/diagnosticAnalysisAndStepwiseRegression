@@ -74,3 +74,10 @@ summary(model)
 modelRemoveS <- lm(Fertility ~ Agriculture + Examination + Education +
                    Catholic + Infant.Mortality, data = swiss,
                    subset = (observation != "sierre"))
+
+# Model with new dataset which removes one outlier
+summary(modelRemoveS)
+
+modelRemoveP <- lm(Fertility ~ Agriculute + Examination + Education +
+                   Catholic + Infant.Mortality, data = swiss,
+                   subset = (observation != "Porrentruy"))
