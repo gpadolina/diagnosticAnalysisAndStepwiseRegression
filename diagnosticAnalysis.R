@@ -165,3 +165,9 @@ vif(swissFinal)
 
 plot(fitted(model2RemoveR), residuals(model2RemoveR),
      xlab = "Fitted", ylab = "Residuals")
+
+# Final test of constant variance with the final model
+abline(h = 0)
+
+qqnorm(residuals(model2RemoveR), ylab = "Residuals", main = " ")
+qqline(residuals(model2RemoveR))
