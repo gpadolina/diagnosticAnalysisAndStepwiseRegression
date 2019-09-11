@@ -115,3 +115,10 @@ modelDropEduc <- lm(Fertility ~ Agriculture + Catholic + Infant.Mortality,
                     data = swissRemoveBoth)
 
 summary(modelDropEduc)
+
+# Testing the equal variance of errors with model from stepwise regression
+plot(fitted(model2), residuals(model2), xlab = "Fitted",
+     ylab = "Residuals")
+
+qqnorm(residuals(model2), ylab = "Residuals", main = " ")
+qqline(residuals(model2))
