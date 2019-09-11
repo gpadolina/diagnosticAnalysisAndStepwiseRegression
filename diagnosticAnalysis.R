@@ -155,3 +155,7 @@ View(swissFinal)
 
 # Model with only intercept (using final dataset)
 null2 <- lm(Fertility ~ 1, data = swissFinal)
+
+# Stepwise regression on null model with final dataset to confirm the final model
+step(null, scope = list(upper = model2RemoveR), data = swissFinal,
+     direction = "both")
