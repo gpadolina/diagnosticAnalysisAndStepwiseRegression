@@ -48,7 +48,7 @@ var.test(residuals(model)[swiss$Catholic > 60], residuals(model)[swiss$Catholic 
 
 n <- length(residuals(model))
 
-plot(tail(residuals(model), n-1) ~ head(residuals(model), n-1),
+plot(tail(residuals(model), n - 1) ~ head(residuals(model), n - 1),
      xlab = expression(hat(epsilon)[i]), ylab = expression(hat(epsilon)[i + 1]))
 
 # Plot to test independent errors
@@ -122,3 +122,12 @@ plot(fitted(model2), residuals(model2), xlab = "Fitted",
 
 qqnorm(residuals(model2), ylab = "Residuals", main = " ")
 qqline(residuals(model2))
+
+# Testing the normality assumption with new model
+shapiro.test(residuals(model2))
+plot(model2)
+
+n <- length(residuals(model2))
+
+plot(tail(residuals(model2), n - 1) ~ head(residuals(model2), n - 1),
+     xlab = expression(hat(epsilon)[i]), ylab = expression(hat(epsilon)[i + 1]))
