@@ -93,3 +93,6 @@ modelRemoveBoth <- lm(Fertility ~ Agriculture + Examination + Catholic +
                       Infant.Mortality, data = swissRemoveBoth)
 
 summary(modelRemoveBoth)
+
+# Model with intercept parameter only
+null <- lm(Fertility ~ 1, data = swissRemoveBoth)
