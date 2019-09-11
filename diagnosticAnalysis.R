@@ -171,3 +171,11 @@ abline(h = 0)
 
 qqnorm(residuals(model2RemoveR), ylab = "Residuals", main = " ")
 qqline(residuals(model2RemoveR))
+
+# Final tests of normality with final model
+shapiro.test(residuals(model2RemoveR))
+
+n <- length(residuals(model2RemoveR))
+
+plot(tail(residuals(model2RemoveR), n - 1) ~ head(residuals(model2RemoveR), n - 1),
+     xlab = expression(hat(epsilon)[i]), ylab = expression(hat(epsilon)[i + 1]))
