@@ -138,3 +138,10 @@ abline(h = 0, v = 0, col = grey(0.75))
 observation2 <- row.names(swissRemoveBoth)
 
 cook2 <- cooks.distance(model2)
+
+# Identifying new outliers with new model
+halfnorm(cook2, 3, labs = observation2, ylab = "Cook's Distance")
+
+model2RemoveR <- lm(Fertility ~ Agriculture + Education + Catholic +
+                    Infant.Mortality, data = swissRemoveBoth,
+                    subset = (observation2 != "Rive Gauche"))
