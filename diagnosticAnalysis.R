@@ -96,3 +96,7 @@ summary(modelRemoveBoth)
 
 # Model with intercept parameter only
 null <- lm(Fertility ~ 1, data = swissRemoveBoth)
+
+# Performs stepwise regression on the null model with dataset excluding the two outliers
+step(null, scope = list(upper = modelRemoveBoth), data = swissRemoveBoth,
+     direction = "both")
