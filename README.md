@@ -36,11 +36,13 @@ model <- lm(Fertility ~ Agriculture + Examination + Education + Catholic + Infan
 summary(model)
 ```
 Residuals:
+
 | Min | 1Q | Median | 3Q | Max |
 | --- | --- | --- | --- | --- |
 | -15.2743 | -5.2617 | 0.5032 | 4.1198 | 15.3213 |
 
 Coefficients:
+
 | | Estimate | Std. Error | t value | Pr(>|t|) |
 | --- | --- | --- | --- | --- |
 | (Intercept) | 66.91518 | 10.70604 | 6.250 | 1.91e-07 *** |
