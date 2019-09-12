@@ -28,3 +28,10 @@ After initial inspection, it can be seen that Fertility and Education are about 
 Lets visualize the correlation using ggpairs().
 
 ![Image of Correlation](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/correlation.png)
+
+### Calling `lm`
+```
+model <- lm(Fertility ~ Agriculture + Examination + Education + Catholic + Infant.Mortality, data = swiss)
+
+summary(model)
+```
