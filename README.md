@@ -14,6 +14,7 @@ The data includes the following features:
 Lets start with the correlation table of the Swiss data.
 
 | | Fertility | Agriculture | Examination | Education | Catholic | Infant.Mortality |
+| --- | --- | --- | --- | --- | --- | --- |
 | Fertility | 1.0000000 | 0.35307918 | -0.6458827 | -0.66378886 | 0.4636847 | 0.41655603 |
 | Agriculture | 0.3530792 | 1.00000000 | -0.6865422 | -0.63952272 | 0.4010951 | -0.06085861 |
 | Examination | -0.6458827 | -0.68654221 | 1.0000000 | 0.69841530 | -0.5727418 | -0.11402160 |
