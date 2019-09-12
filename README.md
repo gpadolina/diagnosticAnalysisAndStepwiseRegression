@@ -26,3 +26,5 @@ Lets start with the correlation table of the Swiss data.
 After initial inspection, it can be seen that Fertility and Education are about averagely negatively correlated.
 
 Lets visualize the correlation using ggpairs().
+
+![Image of Correlation](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/correlation.png)
