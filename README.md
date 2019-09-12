@@ -53,5 +53,7 @@ Coefficients:
 | Infant.Mortality | 1.07705 | 0.38172 | 2.822 | 0.00734 ** |
 
 Residual standard error: 7.165 on 41 degrees of freedom
+
 Multiple R-squared: 0.7067, Adjusted R-squared: 0.671
+
 F-statistic: 19.76 on 5 and 41 DF, p-value: 5.594e-10
