@@ -22,3 +22,7 @@ Lets start with the correlation table of the Swiss data.
 | Education | -0.6637889 | -0..63952252 | 0.6984153 | 1.00000000 | -0.1538589 | -0.09932185 |
 | Catholic | 0.4636847 | 0.40109505 | -0.5727418 | -0.15385892 | 1.0000000 | 0.17549591 |
 | Infant.Mortality | 0.4165560 | -0.06085861 | -0.1140216 | -0.09932185 | 0.1754959 | 1.00000000 |
+
+After initial inspection, it can be seen that Fertility and Education are about averagely negatively correlated.
+
+Lets visualize the correlation using ggpairs().
