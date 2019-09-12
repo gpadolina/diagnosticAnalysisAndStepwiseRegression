@@ -60,3 +60,9 @@ F-statistic: 19.76 on 5 and 41 DF, p-value: 5.594e-10
 
 ### Normality Plot
 ![Image of Normality Plot](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/normalityPlot.png)
+
+### Normality Test
+Shapiro-Wilk normality test
+
+data: residuals(model)
+W = 0.98892, p-value = 0.9318
