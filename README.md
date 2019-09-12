@@ -35,3 +35,17 @@ model <- lm(Fertility ~ Agriculture + Examination + Education + Catholic + Infan
 
 summary(model)
 ```
+Residuals:
+| Min | 1Q | Median | 3Q | Max |
+| --- | --- | --- | --- | --- |
+| -15.2743 | -5.2617 | 0.5032 | 4.1198 | 15.3213 |
+
+Coefficients:
+| | Estimate | Std. Error | t value | Pr(>|t|) |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 66.91518 | 10.70604 | 6.250 | 1.91e-07 *** |
+| Agriculture | -0.17211 | 0.07030 | -2.448 | 0.01873 * |
+| Examination | -0.25801 | 0.25388 | -1.016 | 0.31546 |
+| Education | -0.87094 | 0.18303 | -4.758 | 2.43e-05 *** |
+| Catholic | 0.10412 | 0.03526 | 2.953 | 0.00519 ** |
+| Infant.Mortality | 1.07705 | 0.38172 | 2.822 | 0.00734 ** |
