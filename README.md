@@ -337,3 +337,15 @@ F-statistic: 9.226 on 3 and 41 DF,  p-value: 8.715e-05
 ![Image of stepwise regression model](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/stepwiseRegressionModel.png)
 
 ![Image of qqnorm stepwise](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/qqnormStepwiseRegression.png)
+
+### Testing the normality assumption with new model
+```
+shapiro.test(residuals(model2))
+```
+
+```
+	Shapiro-Wilk normality test
+
+data:  residuals(model2)
+W = 0.97892, p-value = 0.5764
+```
