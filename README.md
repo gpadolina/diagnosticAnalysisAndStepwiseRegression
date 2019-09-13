@@ -75,3 +75,5 @@ W = 0.98892, p-value = 0.9318
 ![Image of Agriculture](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/agriculture.png)
 
 ![Image of Examination](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/examination.png)
+
+![Image of Education](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/education.png)
