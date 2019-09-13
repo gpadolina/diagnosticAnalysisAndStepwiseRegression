@@ -183,3 +183,11 @@ Residual standard error: 6.794 on 40 degrees of freedom
 Multiple R-squared: 0.7415, Adjusted R-squared: 0.7091
 
 F-statistic: 22.94 on 5 and 40 DF, p-value: 8.583e-11
+
+### Remove both of the previous outliers
+```
+modelRemoveBoth <- lm(Fertility ~ Agriculture + Examination + Catholic + Infant.Mortality,
+                     data = swissRemoveBoth)
+                     
+summary(modelRemoveBoth)
+```
