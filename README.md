@@ -179,28 +179,31 @@ modelRemovePorrentruy <- lm(Fertility ~ Agriculture + Examination + Education + 
 summary(modelRemovePorrentruy)
 ```
 
-Residuals:
+```
+Call:
+lm(formula = Fertility ~ Agriculture + Examination + Education + 
+    Catholic + Infant.Mortality, data = swiss, subset = (observation != 
+    "Porrentruy"))
 
-| Min | 1Q | Median | 3Q | Max |
-| --- | --- | --- | --- | --- |
-| -15.7365 | -5.0540 | 0.1953 | 4.1084 | 15.5399 |
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-15.7365  -5.0540   0.1953   4.1084  15.5399 
 
 Coefficients:
-
-| | Estimate | Std. Error | t value | Pr(>abs(t)) |
-| --- | --- | --- | --- | --- |
-| (Intercept) | 65.45554 | 10.16998 | 6.436 | 1.15e-07 *** |
-| Agriculture | -0.21034 | 0.06859 | -3.067 | 0.00387 ** |
-| Examination | -0.32278 | 0.24227 | -1.332 | 0.19031 |
-| Education | -0.89506 | 0.17384 | -5.149 | 7.36e-06 *** |
-| Catholic | 0.11269 | 0.03363 | 3.351 | 0.00177 ** |
-| Infant.Mortality | 1.31567 | 0.37571 | 3.502 | 0.00115 ** |
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      65.45554   10.16998   6.436 1.15e-07 ***
+Agriculture      -0.21034    0.06859  -3.067  0.00387 ** 
+Examination      -0.32278    0.24227  -1.332  0.19031    
+Education        -0.89506    0.17384  -5.149 7.36e-06 ***
+Catholic          0.11269    0.03363   3.351  0.00177 ** 
+Infant.Mortality  1.31567    0.37571   3.502  0.00115 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 6.794 on 40 degrees of freedom
-
-Multiple R-squared: 0.7415, Adjusted R-squared: 0.7091
-
-F-statistic: 22.94 on 5 and 40 DF, p-value: 8.583e-11
+Multiple R-squared:  0.7415,	Adjusted R-squared:  0.7091 
+F-statistic: 22.94 on 5 and 40 DF,  p-value: 8.583e-11
+```
 
 ### Remove both of the previous outliers
 ```
@@ -210,27 +213,29 @@ modelRemoveBoth <- lm(Fertility ~ Agriculture + Examination + Catholic + Infant.
 summary(modelRemoveBoth)
 ```
 
-Residuals:
+```
+Call:
+lm(formula = Fertility ~ Agriculture + Examination + Catholic + 
+    Infant.Mortality, data = swissRemoveBoth)
 
-| Min | 1Q | Median | 3Q | Max |
-| --- | --- | --- | --- | --- |
-| -23.3173 | -2.9673 | 0.5707 | 5.9365 | 13.0533 |
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-23.3173  -2.9673   0.5707   5.9365  13.0533 
 
 Coefficients:
-
-| | Estimate | Std. Error | t value | Pr(>abs(t)) |
-| --- | --- | --- | --- | --- |
-| (Intercept) | 53.55482 | 12.71678 | 4.211 | 0.000140 *** |
-| Agriculture | -0.08179 | 0.07876 | -1.039 | 0.305260 |
-| Examination | -0.98770 | 0.24689 | -4.001 | 0.000265 *** |
-| Catholic | 0.02405 | 0.03703 | 0.649 | 0.519854 |
-| Infant.Mortality | 1.80574 | 0.47162 | 3.829 | 0.000444 *** |
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      53.55482   12.71678   4.211 0.000140 ***
+Agriculture      -0.08179    0.07876  -1.039 0.305260    
+Examination      -0.98770    0.24689  -4.001 0.000265 ***
+Catholic          0.02405    0.03703   0.649 0.519854    
+Infant.Mortality  1.80574    0.47162   3.829 0.000444 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 8.412 on 40 degrees of freedom
-
-Multiple R-squared: 0.5736, Adjusted R-squared: 0.531
-
-F-statistic: 13.45 on 4 and 40 DF, p-value: 4.918e-07
+Multiple R-squared:  0.5736,	Adjusted R-squared:  0.531 
+F-statistic: 13.45 on 4 and 40 DF,  p-value: 4.918e-07
+```
 
 ### Stepwise regression excluding the two outliers
 ```
