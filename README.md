@@ -331,3 +331,9 @@ Residual standard error: 9.832 on 41 degrees of freedom
 Multiple R-squared:  0.403,	Adjusted R-squared:  0.3593 
 F-statistic: 9.226 on 3 and 41 DF,  p-value: 8.715e-05
 ```
+
+### Testing for equal variance of errors with model from stepwise regression
+
+![Image of stepwise regression model](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/stepwiseRegressionModel.png)
+
+![Image of qqnorm stepwise](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/qqnormStepwiseRegression.png)
