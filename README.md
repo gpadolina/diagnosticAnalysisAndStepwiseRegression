@@ -85,3 +85,4 @@ W = 0.98892, p-value = 0.9318
 ### F-stest of equal variance of errors among two groups of Catholic
 ```
 var.test(residuals(model)[swiss$Catholic > 60], residuals(model)[swiss$Catholic < 60])
+```
