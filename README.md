@@ -103,21 +103,19 @@ W = 0.98892, p-value = 0.9318
 ```
 var.test(residuals(model)[swiss$Catholic > 60], residuals(model)[swiss$Catholic < 60])
 ```
-F test to compare two variances
 
+```
+	F test to compare two variances
+
+data:  residuals(model1)[swiss$Catholic > 60] and residuals(model1)[swiss$Catholic < 60]
 F = 1.4591, num df = 15, denom df = 30, p-value = 0.3679
-
 alternative hypothesis: true ratio of variances is not equal to 1
-
 95 percent confidence interval:
-
-   0.6324179 3.8574358
-
+ 0.6324179 3.8574358
 sample estimates:
-
-ratio of variances
-
-   1.459085
+ratio of variances 
+          1.459085 
+```
 
 ![Image of Catholic Residuals](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/catholicResiduals..png)
 
