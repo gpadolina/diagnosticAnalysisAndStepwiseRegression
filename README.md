@@ -349,3 +349,13 @@ shapiro.test(residuals(model2))
 data:  residuals(model2)
 W = 0.97892, p-value = 0.5764
 ```
+
+### Testing the normality assumption with new model
+
+![Image of outliers2](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/outliers2.png)
+
+![Image of normalqq2](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/normalQQ2.png)
+
+![Image of scalelocation2](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/scaleLocation2.png)
+
+![Image of residualsleverage2](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/residualsLeverage2.png)
