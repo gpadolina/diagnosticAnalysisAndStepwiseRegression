@@ -258,3 +258,34 @@ Coefficients:
      (Intercept)       Examination  Infant.Mortality  
          46.9259           -0.8877            1.8940
 ```
+
+### New model from stepwise regression
+```
+model2 <- lm(Fertility ~ Agriculture + Education + Catholic + Infant.Mortality, data = swissRemoveBoth)
+
+summary(model2)
+```
+
+```
+Call:
+lm(formula = Fertility ~ Agriculture + Education + Catholic + 
+    Infant.Mortality, data = swissRemoveBoth)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-14.756  -5.413   1.006   3.643  12.930 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      55.86203    8.67888   6.437 1.15e-07 ***
+Agriculture      -0.19874    0.06202  -3.204 0.002659 ** 
+Education        -1.01426    0.13291  -7.631 2.52e-09 ***
+Catholic          0.12455    0.02657   4.687 3.19e-05 ***
+Infant.Mortality  1.52059    0.35972   4.227 0.000133 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.352 on 40 degrees of freedom
+Multiple R-squared:  0.7569,	Adjusted R-squared:  0.7326 
+F-statistic: 31.14 on 4 and 40 DF,  p-value: 8.375e-12
+```
