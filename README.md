@@ -94,10 +94,10 @@ alternative hypothesis: true ratio of variances is not equal to 1
 
 95 percent confidence interval:
 
- 0.6324179 3.8574358
+   0.6324179 3.8574358
 
 sample estimates:
 
 ratio of variances
 
-          1.459085
+   1.459085
