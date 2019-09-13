@@ -494,3 +494,5 @@ shapiro.test(residuals(model2RemoveR))
 data:  residuals(model2RemoveR)
 W = 0.97813, p-value = 0.5605
 ```
+
+![Image of final independent errors](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalIndependentErrorsModel.png)
