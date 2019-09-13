@@ -111,3 +111,13 @@ ratio of variances
 ### Identify influential points
 
 ![Image of influential points](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/influentialPoints.png)
+
+### Identify potential outliers
+
+![Image of outliers](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/outliers1.png)
+
+![Image of Q-Q plot](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/normalQQ.png)
+
+![Image of Residuals vs Leverage](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/residualsLeverage.png)
+
+![Image of Scale Location](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/scaleLocation.png)
