@@ -289,3 +289,16 @@ Residual standard error: 6.352 on 40 degrees of freedom
 Multiple R-squared:  0.7569,	Adjusted R-squared:  0.7326 
 F-statistic: 31.14 on 4 and 40 DF,  p-value: 8.375e-12
 ```
+
+### Testing multicollinearity with outliers removed
+```
+vif(swissRemoveBoth)
+```
+
+```
+       Fertility      Agriculture      Examination        Education         Catholic 
+        4.242630         2.950615         3.564488         4.945927         2.351665 
+Infant.Mortality 
+        1.557780 
+```
+        
