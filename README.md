@@ -107,3 +107,7 @@ ratio of variances
 ### Identify leverage points
 
 ![Image of leverage points](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/leveragePoints.png)
+
+### Identify influential points
+
+![Image of influential points](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/influentialPoints.png)
