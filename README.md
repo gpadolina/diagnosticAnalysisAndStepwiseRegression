@@ -466,3 +466,15 @@ Coefficients:
      Agriculture  
          -0.1987  
 ```
+
+### Final check of multicollinearity with all outliers removed
+```
+vif(swissFinal)
+```
+
+```
+       Fertility      Agriculture      Examination        Education         Catholic 
+        4.554269         3.068551         3.643064         4.625727         2.493741 
+Infant.Mortality 
+        1.642003 
+```
