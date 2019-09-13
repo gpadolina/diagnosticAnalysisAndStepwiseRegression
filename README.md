@@ -369,10 +369,10 @@ W = 0.97892, p-value = 0.5764
 ![Image of new outliers model](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/influentialPoints2.png)
 
 ```
-model2RemoveRiveGauche <- lm(Fertility ~ Agriculture + Education + Catholic + Infant.Mortality, data = swissRemoveBoth,
+model2RemoveR <- lm(Fertility ~ Agriculture + Education + Catholic + Infant.Mortality, data = swissRemoveBoth,
 		    subset = (observation2 != "Rive Gauche"))
 		    
-summary(model2RemoveRiveGauche)
+summary(model2RemoveR)
 ```
 
 ```
@@ -398,4 +398,71 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 5.925 on 39 degrees of freedom
 Multiple R-squared:  0.7683,	Adjusted R-squared:  0.7445 
 F-statistic: 32.32 on 4 and 39 DF,  p-value: 6.619e-12
+```
+
+### Stepwise regression on null model with final data to confirm having the final model
+```
+stepwise(null, scope = list(upper = model2RemoveR), data = swissFinal, direction = "both")
+```
+
+```
+Start:  AIC=226.73
+Fertility ~ 1
+
+                   Df Sum of Sq    RSS    AIC
++ Education         1   2871.37 3767.1 203.23
++ Infant.Mortality  1   1629.31 5009.2 216.06
++ Catholic          1   1211.93 5426.6 219.66
++ Agriculture       1    694.83 5943.7 223.75
+<none>                          6638.5 226.73
+
+Step:  AIC=203.23
+Fertility ~ Education
+
+                   Df Sum of Sq    RSS    AIC
++ Infant.Mortality  1   1202.14 2565.0 187.94
++ Catholic          1    810.64 2956.5 194.33
+<none>                          3767.1 203.23
++ Agriculture       1    112.54 3654.6 203.87
+- Education         1   2871.37 6638.5 226.73
+
+Step:  AIC=187.94
+Fertility ~ Education + Infant.Mortality
+
+                   Df Sum of Sq    RSS    AIC
++ Catholic          1    537.06 2027.9 179.37
+<none>                          2565.0 187.94
++ Agriculture       1     64.96 2500.0 188.78
+- Infant.Mortality  1   1202.14 3767.1 203.23
+- Education         1   2444.21 5009.2 216.06
+
+Step:  AIC=179.36
+Fertility ~ Education + Infant.Mortality + Catholic
+
+                   Df Sum of Sq    RSS    AIC
++ Agriculture       1    414.21 1613.7 171.08
+<none>                          2027.9 179.37
+- Catholic          1    537.06 2565.0 187.94
+- Infant.Mortality  1    928.57 2956.5 194.33
+- Education         1   2182.57 4210.5 210.24
+
+Step:  AIC=171.08
+Fertility ~ Education + Infant.Mortality + Catholic + Agriculture
+
+                   Df Sum of Sq    RSS    AIC
+<none>                          1613.7 171.08
+- Agriculture       1    414.21 2027.9 179.37
+- Infant.Mortality  1    720.88 2334.6 185.70
+- Catholic          1    886.31 2500.0 188.78
+- Education         1   2349.34 3963.0 209.51
+
+Call:
+lm(formula = Fertility ~ Education + Infant.Mortality + Catholic + 
+    Agriculture, data = swissRemoveBoth)
+
+Coefficients:
+     (Intercept)         Education  Infant.Mortality          Catholic  
+         55.8620           -1.0143            1.5206            0.1245  
+     Agriculture  
+         -0.1987  
 ```
