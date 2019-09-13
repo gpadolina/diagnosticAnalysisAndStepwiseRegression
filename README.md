@@ -29,6 +29,18 @@ Lets visualize the correlation using ggpairs().
 
 ![Image of Correlation](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/correlation.png)
 
+### Identifying the presence of multicollinearity
+```
+vif(swiss)
+```
+
+```
+       Fertility      Agriculture      Examination        Education         Catholic 
+        3.409885         2.618024         3.768004         4.307472         2.349162 
+Infant.Mortality 
+        1.322601 
+```
+
 ### Calling `lm`
 ```
 model <- lm(Fertility ~ Agriculture + Examination + Education + Catholic + Infant.Mortality, data = swiss)
