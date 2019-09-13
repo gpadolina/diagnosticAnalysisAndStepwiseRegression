@@ -77,10 +77,12 @@ F-statistic: 19.76 on 5 and 41 DF,  p-value: 5.594e-10
 ![Image of Normality Plot](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/normalityPlot.png)
 
 ### Normality Test
-Shapiro-Wilk normality test
+```
+	Shapiro-Wilk normality test
 
-data: residuals(model)
+data:  residuals(model1)
 W = 0.98892, p-value = 0.9318
+```
 
 #### Test constant variance of errors
 ![Image of Constant Variance of Errors](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/constantVarianceofErrors.png)
