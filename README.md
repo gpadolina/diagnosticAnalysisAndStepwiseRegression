@@ -213,3 +213,48 @@ Residual standard error: 8.412 on 40 degrees of freedom
 Multiple R-squared: 0.5736, Adjusted R-squared: 0.531
 
 F-statistic: 13.45 on 4 and 40 DF, p-value: 4.918e-07
+
+### Stepwise regression excluding the two outliers
+```
+step(null, scope = list(upper = modelRemoveBoth), data = swissRemoveBoth,
+      direction = "both")
+```
+
+```
+Start:  AIC=226.73
+Fertility ~ 1
+
+                   Df Sum of Sq    RSS    AIC
++ Examination       1   2533.47 4105.0 207.10
++ Infant.Mortality  1   1629.31 5009.2 216.06
++ Catholic          1   1211.93 5426.6 219.66
++ Agriculture       1    694.83 5943.7 223.75
+<none>                          6638.5 226.73
+
+Step:  AIC=207.1
+Fertility ~ Examination
+
+                   Df Sum of Sq    RSS    AIC
++ Infant.Mortality  1   1173.47 2931.6 193.95
+<none>                          4105.0 207.10
++ Agriculture       1    142.23 3962.8 207.51
++ Catholic          1     85.05 4020.0 208.16
+- Examination       1   2533.47 6638.5 226.73
+
+Step:  AIC=193.95
+Fertility ~ Examination + Infant.Mortality
+
+                   Df Sum of Sq    RSS    AIC
+<none>                          2931.6 193.95
++ Agriculture       1     71.23 2860.3 194.84
++ Catholic          1     24.74 2906.8 195.57
+- Infant.Mortality  1   1173.47 4105.0 207.10
+- Examination       1   2077.63 5009.2 216.06
+
+Call:
+lm(formula = Fertility ~ Examination + Infant.Mortality, data = swissRemoveBoth)
+
+Coefficients:
+     (Intercept)       Examination  Infant.Mortality  
+         46.9259           -0.8877            1.8940
+```
