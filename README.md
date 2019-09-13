@@ -363,3 +363,7 @@ W = 0.97892, p-value = 0.5764
 #### Test independent errors
 
 ![Image of stepwise residuals](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/stepwiseResiduals.png)
+
+### Identifying new outliers with new models
+
+![Image of new outliers model](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/influentialPoints2.png)
