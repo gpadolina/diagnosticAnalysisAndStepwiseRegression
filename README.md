@@ -101,3 +101,5 @@ sample estimates:
 ratio of variances
 
    1.459085
+
+![Image of Catholic Residuals](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/catholicResiduals..png)
