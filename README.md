@@ -191,3 +191,25 @@ modelRemoveBoth <- lm(Fertility ~ Agriculture + Examination + Catholic + Infant.
                      
 summary(modelRemoveBoth)
 ```
+
+Residuals:
+
+| Min | 1Q | Median | 3Q | Max |
+| --- | --- | --- | --- | --- |
+| -23.3173 | -2.9673 | 0.5707 | 5.9365 | 13.0533 |
+
+Coefficients:
+
+| | Estimate | Std. Error | t value | Pr(>abs(t)) |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 53.55482 | 12.71678 | 4.211 | 0.000140 *** |
+| Agriculture | -0.08179 | 0.07876 | -1.039 | 0.305260 |
+| Examination | -0.98770 | 0.24689 | -4.001 | 0.000265 *** |
+| Catholic | 0.02405 | 0.03703 | 0.649 | 0.519854 |
+| Infant.Mortality | 1.80574 | 0.47162 | 3.829 | 0.000444 *** |
+
+Residual standard error: 8.412 on 40 degrees of freedom
+
+Multiple R-squared: 0.5736, Adjusted R-squared: 0.531
+
+F-statistic: 13.45 on 4 and 40 DF, p-value: 4.918e-07
