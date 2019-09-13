@@ -359,3 +359,7 @@ W = 0.97892, p-value = 0.5764
 ![Image of scalelocation2](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/scaleLocation2.png)
 
 ![Image of residualsleverage2](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/residualsLeverage2.png)
+
+#### Test independent errors
+
+![Image of stepwise residuals](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/stepwiseResiduals.png)
