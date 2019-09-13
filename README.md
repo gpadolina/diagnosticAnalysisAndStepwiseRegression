@@ -478,3 +478,7 @@ vif(swissFinal)
 Infant.Mortality 
         1.642003 
 ```
+
+![Image of final residual](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalResidual.png)
+
+![Image of final constant variace](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalConstantVariance.png)
