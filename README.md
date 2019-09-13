@@ -70,4 +70,6 @@ W = 0.98892, p-value = 0.9318
 #### Test constant variance of errors
 ![Image of Constant Variance of Errors](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/constantVarianceofErrors.png)
 
-## Not done
+### Constant variance of errors
+
+![Image of Agriculture](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/agriculture.png)
