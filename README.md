@@ -160,3 +160,26 @@ modelRemovePorrentruy <- lm(Fertility ~ Agriculture + Examination + Education + 
                            
 summary(modelRemovePorrentruy)
 ```
+
+Residuals:
+
+| Min | 1Q | Median | 3Q | Max |
+| --- | --- | --- | --- | --- |
+| -15.7365 | -5.0540 | 0.1953 | 4.1084 | 15.5399 |
+
+Coefficients:
+
+| | Estimate | Std. Error | t value | Pr(>abs(t)) |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 65.45554 | 10.16998 | 6.436 | 1.15e-07 *** |
+| Agriculture | -0.21034 | 0.06859 | -3.067 | 0.00387 ** |
+| Examination | -0.32278 | 0.24227 | -1.332 | 0.19031 |
+| Education | -0.89506 | 0.17384 | -5.149 | 7.36e-06 *** |
+| Catholic | 0.11269 | 0.03363 | 3.351 | 0.00177 ** |
+| Infant.Mortality | 1.31567 | 0.37571 | 3.502 | 0.00115 ** |
+
+Residual standard error: 6.794 on 40 degrees of freedom
+
+Multiple R-squared: 0.7415, Adjusted R-squared: 0.7091
+
+F-statistic: 22.94 on 5 and 40 DF, p-value: 8.583e-11
