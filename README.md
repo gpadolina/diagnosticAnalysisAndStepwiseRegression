@@ -367,3 +367,35 @@ W = 0.97892, p-value = 0.5764
 ### Identifying new outliers with new models
 
 ![Image of new outliers model](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/influentialPoints2.png)
+
+```
+model2RemoveRiveGauche <- lm(Fertility ~ Agriculture + Education + Catholic + Infant.Mortality, data = swissRemoveBoth,
+		    subset = (observation2 != "Rive Gauche"))
+		    
+summary(model2RemoveRiveGauche)
+```
+
+```
+Call:
+lm(formula = Fertility ~ Agriculture + Education + Catholic + 
+    Infant.Mortality, data = swissRemoveBoth, subset = (observation2 != 
+    "Rive Gauche"))
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-10.9764  -4.7365   0.7061   3.7102  12.5382 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      55.67762    8.09634   6.877 3.16e-08 ***
+Agriculture      -0.20119    0.05787  -3.477  0.00126 ** 
+Education        -0.94425    0.12679  -7.447 5.25e-09 ***
+Catholic          0.13174    0.02494   5.283 5.11e-06 ***
+Infant.Mortality  1.50098    0.33565   4.472 6.52e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.925 on 39 degrees of freedom
+Multiple R-squared:  0.7683,	Adjusted R-squared:  0.7445 
+F-statistic: 32.32 on 4 and 39 DF,  p-value: 6.619e-12
+```
