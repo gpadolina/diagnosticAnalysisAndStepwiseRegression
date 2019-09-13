@@ -89,9 +89,15 @@ var.test(residuals(model)[swiss$Catholic > 60], residuals(model)[swiss$Catholic 
 F test to compare two variances
 
 F = 1.4591, num df = 15, denom df = 30, p-value = 0.3679
+
 alternative hypothesis: true ratio of variances is not equal to 1
+
 95 percent confidence interval:
+
  0.6324179 3.8574358
+
 sample estimates:
+
 ratio of variances
+
           1.459085
