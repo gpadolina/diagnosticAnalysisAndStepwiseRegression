@@ -3,6 +3,7 @@ library(ggplot2)
 library(GGally)
 library(tidyr)
 library(car)
+library(faraway)
 
 remove(list = ls())
 
