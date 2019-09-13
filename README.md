@@ -302,3 +302,32 @@ Infant.Mortality
         1.557780 
 ```
         
+### Testing model with education removed
+```
+modelDropEdu <- lm(Fertility ~ Agriculture + Catholic + Infant.Mortality, data = swissRemoveBoth)
+
+summary(modelDropEdu)
+```
+
+```
+Call:
+lm(formula = Fertility ~ +Agriculture + Catholic + Infant.Mortality, 
+    data = swissRemoveBoth)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-25.424  -5.273   1.224   6.183  19.190 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      21.00683   11.42308   1.839 0.073168 .  
+Agriculture       0.11501    0.07188   1.600 0.117284    
+Catholic          0.07970    0.04011   1.987 0.053628 .  
+Infant.Mortality  1.99470    0.54844   3.637 0.000763 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 9.832 on 41 degrees of freedom
+Multiple R-squared:  0.403,	Adjusted R-squared:  0.3593 
+F-statistic: 9.226 on 3 and 41 DF,  p-value: 8.715e-05
+```
