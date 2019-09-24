@@ -74,6 +74,7 @@ Residual standard error: 7.165 on 41 degrees of freedom
 Multiple R-squared:  0.7067,	Adjusted R-squared:  0.671 
 F-statistic: 19.76 on 5 and 41 DF,  p-value: 5.594e-10
 ```
+After running the initial model, it generated an adjusted R-squared of 0.671 and all of the variables except Examination are significant. This indicates that Examination should be dropped and see how it would affect the model and remaining variables. However, I will keep it until performing model selection.
 
 ### Normality Plot
 ![Image of Normality Plot](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/normalityPlot.png)
