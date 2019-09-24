@@ -23,7 +23,7 @@ Lets start with the correlation table of the Swiss data.
 | Catholic | 0.4636847 | 0.40109505 | -0.5727418 | -0.15385892 | 1.0000000 | 0.17549591 |
 | Infant.Mortality | 0.4165560 | -0.06085861 | -0.1140216 | -0.09932185 | 0.1754959 | 1.00000000 |
 
-After initial inspection, it can be seen that Fertility and Education are about averagely negatively correlated.
+After initial inspection, the largest correlations were 0.6984 (Examination and Education) and -0.6865 (Agriculute and Education) these values aren't very large to imply multicollinearity.
 
 Lets visualize the correlation using ggpairs().
 
