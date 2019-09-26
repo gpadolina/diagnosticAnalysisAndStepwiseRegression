@@ -537,9 +537,9 @@ The largest vif is 4.6257 for Education. Again, this isn't large enough to indic
 
 ![Image of final residual](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalResidual.png)
 
-![Image of final constant variace](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalConstantVariance.png)
-
 The plot doesn't indicate any violate of constant variance of error assumption.
+
+![Image of final constant variace](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalConstantVariance.png)
 
 ### Final test of normality with final model
 ```
@@ -552,5 +552,11 @@ shapiro.test(residuals(model2RemoveR))
 data:  residuals(model2RemoveR)
 W = 0.97813, p-value = 0.5605
 ```
+The Q-Q plot looks fine and the final Shapiro-Wilk test returned a p-value = 0.5605, which does not warrant rejecting the null hypothesis. Therefore, it does not violate the normality assumption.
 
 ![Image of final independent errors](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalIndependentErrorsModel.png)
+
+After testing all of the assumptions, all were satisfied by the final model with the final dataset and that the fit was better than any of the previous model while the remaining variables are all more significant than they had been. Three outliers were removed: Sierre, Porrentruy, and Rive Gauche. The final model is:
+```
+Fertility ~ Agriculture + Education + Catholic + Infant.Mortality
+```
