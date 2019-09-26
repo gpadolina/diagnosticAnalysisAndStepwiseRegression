@@ -127,7 +127,11 @@ ratio of variances
 
 The p-value = 0.3679, therefore the null hypothesis of having equal variances cannot be rejected. The equal variance assumption was then not violated.
 
+To See if there is a pattern that indicates that the erors are not independent, lets plot residuals against successive residuals.
+
 ![Image of Catholic Residuals](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/catholicResiduals..png)
+
+Clearly, there is no visible pattern from the plot. Therefore, the independent errors assumption was not violated.
 
 ### Identify leverage points
 
