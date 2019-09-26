@@ -417,6 +417,7 @@ Running another Shapiro-Wilk test generated a p-value = 0.5764, which did not wa
 The successive error plot did not find any indication of a non-independent relationship between errors.
 
 ### Identifying new outliers with new models
+Lets construct another leverage and cook's distance half norm plot to identify any new outliers from the new model.
 
 ![Image of new outliers model](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/influentialPoints2.png)
 
@@ -451,6 +452,7 @@ Residual standard error: 5.925 on 39 degrees of freedom
 Multiple R-squared:  0.7683,	Adjusted R-squared:  0.7445 
 F-statistic: 32.32 on 4 and 39 DF,  p-value: 6.619e-12
 ```
+In the previous plot, another outlier "Rive Gauche" was found and so it was removed. Without this outlier, the new model generated an adjusted R-squared = 0.7445, an increased from the previous one and all the variables are more significant. Lets run another stepwise regression.
 
 ### Stepwise regression on null model with final data to confirm having the final model
 ```
@@ -518,6 +520,7 @@ Coefficients:
      Agriculture  
          -0.1987  
 ```
+After performing another stepwise regression, the same model was obtained and it can be concluded that this is the final model.
 
 ### Final check of multicollinearity with all outliers removed
 ```
@@ -530,10 +533,13 @@ vif(swissFinal)
 Infant.Mortality 
         1.642003 
 ```
+The largest vif is 4.6257 for Education. Again, this isn't large enough to indicate multicollinearity.
 
 ![Image of final residual](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalResidual.png)
 
 ![Image of final constant variace](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/finalConstantVariance.png)
+
+The plot doesn't indicate any violate of constant variance of error assumption.
 
 ### Final test of normality with final model
 ```
