@@ -74,7 +74,7 @@ Residual standard error: 7.165 on 41 degrees of freedom
 Multiple R-squared:  0.7067,	Adjusted R-squared:  0.671 
 F-statistic: 19.76 on 5 and 41 DF,  p-value: 5.594e-10
 ```
-After running the initial model, it generated an adjusted R-squared of 0.671 and all of the variables except Examination are significant. This indicates that Examination should be dropped and see how it would affect the model and remaining variables. However, I will keep it until performing model selection.
+After running the initial model, it generated an adjusted R-squared of 0.671 and all of the variables except Examination are significant. This indicates that Examination should be dropped and see how it would affect the model and remaining variables. However, lets keep it until performing model selection.
 
 ### Normality Plot
 ![Image of Normality Plot](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/normalityPlot.png)
@@ -88,7 +88,7 @@ To test the assumption of normal errors, lets look at a Q-Q plot. The points app
 data:  residuals(model1)
 W = 0.98892, p-value = 0.9318
 ```
-With a p-value = 0.9318, the null hypothesis that the errors were from a normal population can be kept. Therefor, the normality assumption was not violated.
+With a p-value = 0.9318, the null hypothesis that the errors were from a normal population can be kept. Therefore, the normality assumption was not violated.
 
 #### Test constant variance of errors
 ![Image of Constant Variance of Errors](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/constantVarianceofErrors.png)
@@ -104,6 +104,8 @@ With a p-value = 0.9318, the null hypothesis that the errors were from a normal 
 ![Image of Catholic](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/catholic.png)
 
 ![Image of Infant Mortality](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/infantMortality.png)
+
+All of the plots against residuals looked good and did not show signs of non-linearity. The plot of Catholic against the residuals, however, did show two groups of data. Lets run an F-test to test if the variance between these two groups are equal.
 
 ### F-stest of equal variance of errors among two groups of Catholic
 ```
@@ -122,6 +124,8 @@ sample estimates:
 ratio of variances 
           1.459085 
 ```
+
+The p-value = 0.3679, therefore the null hypothesis of having equal variances cannot be rejected. The equal variance assumption was then not violated.
 
 ![Image of Catholic Residuals](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/catholicResiduals..png)
 
