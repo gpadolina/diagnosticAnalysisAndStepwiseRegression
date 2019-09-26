@@ -381,7 +381,11 @@ The model with Education removed generated an adjusted R-squared of 0.3593, a si
 
 ![Image of stepwise regression model](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/stepwiseRegressionModel.png)
 
+Again, plotting fitted vs residuals did not find any evidence that violates the constant variance assumption.
+
 ![Image of qqnorm stepwise](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/qqnormStepwiseRegression.png)
+
+Same thing for Q-Q plot. It did not find evidence that violates the normality assumption.
 
 ### Testing the normality assumption with new model
 ```
@@ -394,6 +398,7 @@ shapiro.test(residuals(model2))
 data:  residuals(model2)
 W = 0.97892, p-value = 0.5764
 ```
+Running another Shapiro-Wilk test generated a p-value = 0.5764, which did not warrant rejecting the null hypothesis. Thus, there was no violation of normality assumption.
 
 ### Testing the normality assumption with new model
 
@@ -408,6 +413,8 @@ W = 0.97892, p-value = 0.5764
 #### Test independent errors
 
 ![Image of stepwise residuals](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/stepwiseResiduals.png)
+
+The successive error plot did not find any indication of a non-independent relationship between errors.
 
 ### Identifying new outliers with new models
 
