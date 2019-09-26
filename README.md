@@ -252,8 +252,11 @@ Residual standard error: 8.412 on 40 degrees of freedom
 Multiple R-squared:  0.5736,	Adjusted R-squared:  0.531 
 F-statistic: 13.45 on 4 and 40 DF,  p-value: 4.918e-07
 ```
+As you can see, removing both outliers did not do good as the adjusted R-squared dropped significantly. However, some predictor variables became more significant.
 
 ### Stepwise regression excluding the two outliers
+This uses the AIC criterios and returns the model with Examination removed. Recall that the Examination was the only nonsignificant variable from the beginning when it was considered to be drop. So, it makes sense that this was the variable that stepwise regression chose to eliminate.
+
 ```
 step(null, scope = list(upper = modelRemoveBoth), data = swissRemoveBoth,
       direction = "both")
@@ -328,6 +331,7 @@ Residual standard error: 6.352 on 40 degrees of freedom
 Multiple R-squared:  0.7569,	Adjusted R-squared:  0.7326 
 F-statistic: 31.14 on 4 and 40 DF,  p-value: 8.375e-12
 ```
+The new model generated an adjusted R-squared of 0.7326 as can be seen. Furthermore, all the remaining variables were more significant than in the previous full model.
 
 ### Testing multicollinearity with outliers removed
 ```
