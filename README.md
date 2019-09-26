@@ -344,7 +344,8 @@ vif(swissRemoveBoth)
 Infant.Mortality 
         1.557780 
 ```
-        
+The largest vif is 4.9459 for Education. This is not large enough to indicate the presence of multicollinearity.
+
 ### Testing model with education removed
 ```
 modelDropEdu <- lm(Fertility ~ Agriculture + Catholic + Infant.Mortality, data = swissRemoveBoth)
@@ -374,6 +375,7 @@ Residual standard error: 9.832 on 41 degrees of freedom
 Multiple R-squared:  0.403,	Adjusted R-squared:  0.3593 
 F-statistic: 9.226 on 3 and 41 DF,  p-value: 8.715e-05
 ```
+The model with Education removed generated an adjusted R-squared of 0.3593, a significant drop from the previous one. Many of the remaining variables also became insignificant. So it's best to keep Education in the model.
 
 ### Testing for equal variance of errors with model from stepwise regression
 
