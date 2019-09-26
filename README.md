@@ -137,6 +137,8 @@ Clearly, there is no visible pattern from the plot. Therefore, the independent e
 
 ![Image of leverage points](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/leveragePoints.png)
 
+By using the leverage and cook's distance plot, the influential outliers can be identified.
+
 ### Identify influential points
 
 ![Image of influential points](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/influentialPoints.png)
