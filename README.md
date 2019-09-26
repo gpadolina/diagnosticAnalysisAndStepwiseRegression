@@ -79,6 +79,8 @@ After running the initial model, it generated an adjusted R-squared of 0.671 and
 ### Normality Plot
 ![Image of Normality Plot](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/normalityPlot.png)
 
+To test the assumption of normal errors, lets look at a Q-Q plot. The points appeared to fall of the line with little deviation. To supplement this, lets use a Shapiro-Wilk test. 
+
 ### Normality Test
 ```
 	Shapiro-Wilk normality test
@@ -86,6 +88,7 @@ After running the initial model, it generated an adjusted R-squared of 0.671 and
 data:  residuals(model1)
 W = 0.98892, p-value = 0.9318
 ```
+With a p-value = 0.9318, the null hypothesis that the errors were from a normal population can be kept. Therefor, the normality assumption was not violated.
 
 #### Test constant variance of errors
 ![Image of Constant Variance of Errors](https://github.com/gpadolina/diagnosticAnalysisAndStepwiseRegression/blob/master/plots/constantVarianceofErrors.png)
